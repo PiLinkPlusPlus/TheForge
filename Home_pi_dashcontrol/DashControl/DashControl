@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=DashControl
+PATH=/home/pi/
+Icon=/home/pi/DashControl/DashControl_icon.png
+Exec=/home/pi/dashcontrol_startup.sh
+Type=Application
+Terminal=false
