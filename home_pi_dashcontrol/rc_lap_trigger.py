@@ -7,10 +7,10 @@ import can
 Popen(["sudo", "ip", "link", "set", "can0", "down", "type", "can"])
 time.sleep(.5)
 
-Popen(["sudo", "ip", "link", "set", "can0", "up", "type", "can", "bitrate", "500000"])
+Popen(["sudo", "ip", "link", "set", "can0", "up", "type", "can", "bitrate", "1000000"])
 
 can_interface = 'can0'
-bus = can.interface.Bus(bustype='socketcan', channel=can_interface, bitrate=500000)
+bus = can.interface.Bus(bustype='socketcan', channel=can_interface, bitrate=1000000)
 
 # Only accept the start/finish message: standard frame, ID 5
 bus.set_filters([{"can_id": 5, "can_mask": 0x7FF, "extended": False}])
